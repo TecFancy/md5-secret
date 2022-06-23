@@ -38,8 +38,11 @@ jobs:
 
       - name: Deploy 2 Github Pages (repo - md5-secret)
         run: |
-          cd ./build
+          cp ./build /docs -rfv
+          cd /docs
           git init
           git add .
           git commit 'initialize'
+          git checkout docs
+          git remote add origin git@github.com:smpower/md5-secret.git
           git push --set-upstream origin docs
