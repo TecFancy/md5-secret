@@ -37,6 +37,7 @@ jobs:
 
       - name: Deploy 2 Github Pages (repo - md5-secret)
         run: |
+          rm -rfv ./git
           git config --global init.defaultBranch docs
           cd ./build
           git init
