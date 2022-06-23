@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: "16.x"
 
-      - name: Setup
+      - name: Build
         env:
           ACTION_DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
         run: |
@@ -32,14 +32,14 @@ jobs:
           ssh-keyscan github.com >> ~/.ssh/known_hosts
           git config --global user.email "rf.wangchn@foxmail.com"
           git config --global user.name "ruofei"
-          npm install yarn -g
-          yarn
-          yarn build
+          npm i
+          npm run build
 
       - name: Deploy 2 Github Pages (repo - md5-secret)
         run: |
-          cp ./build /docs -rfv
-          cd /docs
+          mkdir -p ~/docs
+          cp ./build ~ -rfv
+          cd ~/docs
           git init
           git add .
           git commit 'initialize'
