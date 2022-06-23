@@ -33,6 +33,7 @@ jobs:
           git config --global user.email "rf.wangchn@foxmail.com"
           git config --global user.name "ruofei"
           npm install yarn -g
+          yarn
           yarn build
 
       - name: Deploy 2 Github Pages (repo - md5-secret)
