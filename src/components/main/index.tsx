@@ -63,6 +63,15 @@ const Main = () => {
           点我加密
         </Button>
       </Space>
+      <ins
+        className="adsbygoogle"
+        style={{ display: "block" }}
+        data-ad-client="ca-pub-6487844781006261"
+        data-ad-slot="5879090324"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      ></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
       <Descriptions
         bordered
         title="加密结果"
@@ -98,6 +107,17 @@ const Main = () => {
           </div>
         </Descriptions.Item>
       </Descriptions>
+      <div className={styles.bottomAd}>
+        <ins
+          className="adsbygoogle"
+          style={{ display: "block" }}
+          data-ad-client="ca-pub-6487844781006261"
+          data-ad-slot="5879090324"
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        ></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
     </main>
   );
 };
